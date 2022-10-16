@@ -1,0 +1,63 @@
+button, input[type=submit] {
+  margin: 3px;
+  letter-spacing: 0.1em;
+  padding: 5px 10px !important;
+  background: black;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  -webkit-box-shadow: black 0px 0px 5px;
+          box-shadow: black 0px 0px 5px;
+  font-size: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+button::after, input[type=submit]::after {
+  content: "";
+  height: 100%;
+  width: 3px;
+  background: #DB2B39;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: -1;
+}
+
+button::before, input[type=submit]::before {
+  content: "";
+  height: 100%;
+  width: 3px;
+  background: #DB2B39;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+button:hover, button:focus, input[type=submit]:hover, input[type=submit]:focus {
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  -webkit-box-shadow: #DB2B39 0px 0px 10px;
+          box-shadow: #DB2B39 0px 0px 10px;
+  -webkit-filter: opacity(80%);
+          filter: opacity(80%);
+  font-size: 1.6rem;
+  padding: 6px 11px;
+  color: black;
+  background: #DB2B39;
+}
+
+button:hover::after, button:focus::after, input[type=submit]:hover::after, input[type=submit]:focus::after {
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  width: 100%;
+}
+
+button:hover::before, button:focus::before, input[type=submit]:hover::before, input[type=submit]:focus::before {
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  width: 100%;
+}
+/*# sourceMappingURL=buttons.css.map */

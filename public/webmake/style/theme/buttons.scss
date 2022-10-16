@@ -1,0 +1,56 @@
+$pimary:#DB2B39;
+$secodary:white;
+$background:black;
+$secandback:white;
+
+button,input[type=submit]{
+    margin: 3px;
+    letter-spacing: 0.1em;
+    padding: 5px 10px!important;
+    background: $background;
+    border-radius: 20px;
+    border:none;
+    outline:none;
+    font-weight: bold;
+    box-shadow: $background 0px 0px 5px;
+    font-size: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    &::after{
+        content: "";
+        height: 100%;
+        width: 3px;
+        background:$pimary;
+        position:absolute;
+        top:0px;
+        right: 0px;
+        z-index: -1;
+    }
+    &::before{
+        content: "";
+        height: 100%;
+        width: 3px;
+        background:$pimary;
+        position:absolute;
+        top:0px;
+        left: 0px;
+        z-index: -1;
+    }
+    &:hover,&:focus{
+        transition:1s ease all;
+        box-shadow: $pimary 0px 0px 10px;
+        filter: opacity(80%);
+        font-size: 1.6rem;
+        padding: 6px 11px;
+        color: black;
+        background: $pimary;
+        &::after{
+            transition:1s ease all;
+            width: 100%;
+        }
+        &::before{
+            transition:1s ease all;
+            width: 100%;
+        }
+    }
+}
